@@ -69,7 +69,6 @@ function check_agent($agent) {
         $agent = preg_replace("/^Local/", "SIP", $agent);
         $agent = preg_replace("/@from/", "", $agent);
     }
-    $agent .= '-' . $partes[1];
 
     if (isset($agentcache["$agent"])) {
         return $agentcache["$agent"];
